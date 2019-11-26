@@ -1,0 +1,154 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #a23900;
+}
+
+header {
+  width: 100%;
+  background-color: #eb5b0c;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+/* Navigation bar */
+
+.navbar {
+  width: 100%;
+  max-width: 120em;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+.navbar img {
+  width: 7em;
+  height: 7em;
+  margin: auto;
+}
+
+.navbar nav {
+  width: 100%;
+  height: 8em;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar__list {
+  display: -webkit-box;
+  display: flex;
+  list-style: none;
+}
+
+.navbar__link {
+  font-size: 1.6em;
+  text-decoration: none;
+  display: block;
+  margin: 0 2em;
+  color: white;
+  -webkit-transition: -webkit-transform 650ms;
+  transition: -webkit-transform 650ms;
+  transition: transform 650ms;
+  transition: transform 650ms, -webkit-transform 650ms;
+}
+
+.navbar__hamburger {
+  width: 3.2em;
+  height: 1.8em;
+  position: relative;
+  cursor: pointer;
+  line-height: 5em;
+  z-index: 1500;
+}
+
+.navbar__hamburger .navbar__line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  display: block;
+  right: 0;
+  -webkit-transition: all 650ms;
+  transition: all 650ms;
+}
+
+.navbar__hamburger .navbar__line:nth-child(1) {
+  top: 0;
+}
+
+.navbar__hamburger .navbar__line:nth-child(2) {
+  top: 50%;
+  margin-top: -1px;
+}
+
+.navbar__hamburger .navbar__line:nth-child(3) {
+  top: 100%;
+  margin-top: -2px;
+}
+
+.navbar__hamburger.active .navbar__line:nth-child(1) {
+  -webkit-transform: translateY(0.8em) rotate(45deg);
+          transform: translateY(0.8em) rotate(45deg);
+}
+
+.navbar__hamburger.active .navbar__line:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__hamburger.active .navbar__line:nth-child(3) {
+  -webkit-transform: translateY(-0.8em) rotate(-45deg);
+          transform: translateY(-0.8em) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__list {
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    background-color: #eb5b0c;
+    position: fixed;
+    left: 0;
+    bottom: -100vh;
+    -webkit-transition: bottom 650ms;
+    transition: bottom 650ms;
+  }
+
+  .navbar__list.active {
+    bottom: 0;
+  }
+
+  .navbar__link {
+    padding-bottom: 3em;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .navbar__hamburger {
+    display: none;
+  }
+}
+
