@@ -19310,9 +19310,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/brian/Documents/Mediacollege/bap/Laravel/Laravel/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/brian/Documents/Mediacollege/bap/Laravel/Laravel/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /Users/brian/Documents/Mediacollege/bap/Laravel/Laravel/resources/sass/admin.scss */"./resources/sass/admin.scss");
+__webpack_require__(/*! /Users/brian/Documents/Mediacollege/bap/NederlandseZaken/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/brian/Documents/Mediacollege/bap/NederlandseZaken/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Users/brian/Documents/Mediacollege/bap/NederlandseZaken/resources/sass/admin.scss */"./resources/sass/admin.scss");
 
 
 /***/ })

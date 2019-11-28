@@ -70,6 +70,10 @@ header {
   transition: transform 650ms, -webkit-transform 650ms;
 }
 
+.navbar__active {
+  text-decoration: line-through;
+}
+
 .navbar__hamburger {
   width: 3.2em;
   height: 1.8em;

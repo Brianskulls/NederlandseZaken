@@ -12,20 +12,20 @@
 */
 
 // Route to Homepage
-Route::view('/', 'home');
+Route::get('/', 'HomeController@index')->name('home');
 
 // Route to Info page
-Route::view('/info', 'info');
+Route::view('/info', 'info')->name('info');
 
 
 // Route to Admin page
-Route::get('/admin', 'AdminController@index');
+Route::get('/admin', 'AdminController@index')->name('admin');
 
 
 // Route to Agenda page
-Route::get('/agenda', 'AgendaController@index');
+Route::get('/agenda', 'AgendaController@index')->name('agenda');
 // Route to Agenda page with selected event name
-Route::get('/agenda/{event_name}', 'AgendaController@showEvent');
+Route::get('/agenda/{event_name}', 'AgendaController@showEvent')->name('agenda-details');
 
 // Route to Contact page
-Route::get('/contact', 'ContactController@index');
+Route::get('/contact', 'ContactController@index')->name('contact');
