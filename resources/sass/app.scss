@@ -57,7 +57,7 @@ header {
     transition: transform 650ms;
   }
   &__active{
-    text-decoration: line-through;
+    text-decoration: underline;
   }
   &__hamburger {
     width: 3.2em;

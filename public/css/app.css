@@ -71,7 +71,7 @@ header {
 }
 
 .navbar__active {
-  text-decoration: line-through;
+  text-decoration: underline;
 }
 
 .navbar__hamburger {

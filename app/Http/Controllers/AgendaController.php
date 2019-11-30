@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 class AgendaController extends Controller
 {
   public function index() {
-    return view('agenda');
+    return view('homepage.agenda');
   }
 
   public function showEvent($event_name) {
     // return 'Evenement: ' . $event_name;
-    return view('agenda', ['event_name' => $event_name]);
+    return view('homepage.agenda', ['event_name' => $event_name]);
   }
 }

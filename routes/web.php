@@ -15,12 +15,16 @@
 Route::get('/', 'HomeController@index')->name('home');
 
 // Route to Info page
-Route::view('/info', 'info')->name('info');
+Route::view('/info', 'homepage.info')->name('info');
 
 
 // Route to Admin page
 Route::get('/admin', 'AdminController@index')->name('admin');
-
+// Route to admin page events
+Route::get('/admin/evenementen', 'AdminController@showEvenementen')->name('admin-evenementen');
+// Route to admin page add events
+Route::get('/admin/toevoegen', 'AdminController@addEvenementen')->name('admin-toevoegen');
+Route::post('/admin/toevoegen', 'AdminController@storeEvenementen')->name('admin-store');
 
 // Route to Agenda page
 Route::get('/agenda', 'AgendaController@index')->name('agenda');
