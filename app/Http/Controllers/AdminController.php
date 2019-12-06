@@ -21,8 +21,8 @@ class AdminController extends Controller
     return view('admin.toevoegen');
   }
 
+  // Initialize evenementen
   public function storeEvenementen(Request $request) {
-    // Initialize evenementen
     $evenementen = new Evenementen();
     $evenementen->naam = $request->evenementNaam;
     $evenementen->beschrijving = $request->evenementBeschrijving;
@@ -33,6 +33,10 @@ class AdminController extends Controller
     $evenementen->eindtijd = $request->evenementEindtijd;
 
     $evenementen->save();
+
+    // Successfully saved
+    // Flash is beying used to destroy the session variable
+    session()->flash('Gelukt', 'Evenement ' . $evenementen->naam . ' succesvol toegevoegd');
 
     return redirect()->back();
   }

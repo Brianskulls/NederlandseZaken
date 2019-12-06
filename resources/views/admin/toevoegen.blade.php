@@ -4,6 +4,9 @@
 <!-- Everything that comes in the <main> -->
 @section('content')
 
+<!-- Including the alert -->
+@include ('layouts.partials.alert')
+
 <!-- Form done with Laravelcollective (Laravelcollective.com for documentation) -->
 {!! Form::open(['route' => "admin-toevoegen", 'method' => 'POST']) !!}
 

@@ -27,8 +27,8 @@
     <td>{{ $evenement->datum }}</td>
     <td>{{ $evenement->created_at }}</td>
     <td>{{ $evenement->updated_at }}</td>
-    <td><a><span>Edit</span></a></td>
-    <td><a><span>Remove</span></a></td>
+    <td><a data-js="open-edit"><span id="{{ $evenement->id }}">Edit</span></a></td>
+    <td><a data-js="open-remove"><span id="{{ $evenement->id }}">Remove</span></a></td>
   </tr>
 
   @endforeach

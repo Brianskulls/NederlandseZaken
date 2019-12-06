@@ -1,6 +1,3 @@
-require('./bootstrap');
-
-
 // Function to select nav elements
 window.onload = function(){
   const selectNavElement = (element) => document.querySelector(element);
