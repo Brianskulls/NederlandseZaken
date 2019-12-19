@@ -27,7 +27,7 @@ Route::get('/admin/toevoegen', 'AdminController@addEvenementen')->name('admin-to
 Route::post('/admin/toevoegen', 'AdminController@storeEvenementen')->name('admin-store');
 
 // Route to Agenda page
-Route::get('/agenda', 'AgendaController@index')->name('agenda');
+Route::get('/agenda', 'AgendaController@showEvenementen')->name('agenda');
 // Route to Agenda page with selected event name
 Route::get('/agenda/{event_name}', 'AgendaController@showEvent')->name('agenda-details');
 
