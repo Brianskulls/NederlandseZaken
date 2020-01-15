@@ -35,13 +35,11 @@
             @foreach($evenementen as $i=>$evenement)
 
                 <div class="event">
-                    <div class="eventImg">
-                        <h2>200 x 300</h2>
-                        <img src="{{Storage::url($evenement->imagepad)}}" alt="">
-                    </div>
+                    <img class="eventImg" src="{{Storage::url($evenement->imagepad)}}" alt="">
                     <h2 class="eventTitle">{{ $evenement->naam }}</h2>
                     <div class="eventData">
-                        <p class="eventDate">{{ $evenement->datum }}</p><p>{{ $evenement->begintijd }}</p>
+                        <p class="eventDate">{{ $evenement->datum }}</p>
+                        <p>{{ $evenement->begintijd }}</p>
                         <p class="eventLocation">{{ $evenement->locatie }}</p>
                     </div>
                 </div>
