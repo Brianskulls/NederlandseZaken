@@ -116,6 +116,8 @@ header {
   width: 300px;
   margin-left: -10px;
   margin-top: -10px;
+  object-fit: cover;
+  object-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
