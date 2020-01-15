@@ -37,7 +37,7 @@
                 <div class="event">
                     <div class="eventImg">
                         <h2>200 x 300</h2>
-                        <img src="{{$evenement->imagepad}}" alt="">
+                        <img src="{{Storage::url($evenement->imagepad)}}" alt="">
                     </div>
                     <h2 class="eventTitle">{{ $evenement->naam }}</h2>
                     <div class="eventData">

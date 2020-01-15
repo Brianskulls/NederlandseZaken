@@ -27,7 +27,7 @@ class AdminController extends Controller
     // Initialize evenementen
     public function storeEvenementen(Request $request)
     {
-        $imagePath = $request->evenementImage->storeAs('storage/uploads ', $request->evenementImage->getClientOriginalName());
+        $imagePath = $request->evenementImage->storeAs('public/images', $request->evenementImage->getClientOriginalName());
 
         $evenementen = new Evenementen();
         $evenementen->naam = $request->evenementNaam;
