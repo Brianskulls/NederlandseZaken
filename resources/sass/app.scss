@@ -122,7 +122,7 @@ header {
         margin: 20px auto 0;
         padding: 10px;
         background-color: dimgrey;
-        height: 270px;
+        height: auto;
         width: 300px;
         border-radius: 20px;
 
@@ -139,8 +139,19 @@ header {
 
         }
 
-        &Title{
+        .eventTitle{
             color: #EB5B0A;
+        }
+
+        .eventData{
+            display: flex;
+            flex-direction: row;
+            margin-left: 0px;
+            max-width: 300px;
+
+            p{
+                margin-right: 10px;
+            }
         }
     }
 }

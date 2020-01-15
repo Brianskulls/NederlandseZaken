@@ -8,36 +8,45 @@ use App\Evenementen;
 
 class AdminController extends Controller
 {
-  public function index() {
-    return view('admin.admin');
-  }
+    public function index()
+    {
+        return view('admin.admin');
+    }
 
-  public function showEvenementen() {
-    $evenementen = Evenementen::orderBy('created_at', 'desc')->get();
-    return view('admin.evenementen')->with('evenementen', $evenementen);
-  }
+    public function showEvenementen()
+    {
+        $evenementen = Evenementen::orderBy('created_at', 'desc')->get();
+        return view('admin.evenementen')->with('evenementen', $evenementen);
+    }
 
-  public function addEvenementen() {
-    return view('admin.toevoegen');
-  }
+    public function addEvenementen()
+    {
+        return view('admin.toevoegen');
+    }
 
-  // Initialize evenementen
-  public function storeEvenementen(Request $request) {
-    $evenementen = new Evenementen();
-    $evenementen->naam = $request->evenementNaam;
-    $evenementen->beschrijving = $request->evenementBeschrijving;
-    $evenementen->samenvatting = $request->evenementSamenvatting;
-    $evenementen->locatie = $request->evenementLocatie;
-    $evenementen->datum = $request->evenementDatum;
-    $evenementen->begintijd = $request->evenementBegintijd;
-    $evenementen->eindtijd = $request->evenementEindtijd;
+    // Initialize evenementen
+    public function storeEvenementen(Request $request)
+    {
+        $imagePath = $request->evenementImage->storeAs('storage/uploads ', $request->evenementImage->getClientOriginalName());
 
-    $evenementen->save();
+        $evenementen = new Evenementen();
+        $evenementen->naam = $request->evenementNaam;
+        $evenementen->beschrijving = $request->evenementBeschrijving;
+        $evenementen->samenvatting = $request->evenementSamenvatting;
+        $evenementen->locatie = $request->evenementLocatie;
+        $evenementen->datum = $request->evenementDatum;
+        $evenementen->begintijd = $request->evenementBegintijd;
+        $evenementen->eindtijd = $request->evenementEindtijd;
+        $evenementen->imagepad = $imagePath;
+        $evenementen->imagenaam = $request->evenementImage->getClientOriginalName();
 
-    // Successfully saved
-    // Flash is beying used to destroy the session variable
-    session()->flash('Gelukt', 'Evenement ' . $evenementen->naam . ' succesvol toegevoegd');
 
-    return redirect()->back();
-  }
+        $evenementen->save();
+
+        // Successfully saved
+        // Flash is beying used to destroy the session variable
+        session()->flash('Gelukt', 'Evenement ' . $evenementen->naam . ' succesvol toegevoegd');
+
+        return redirect()->back();
+    }
 }

@@ -135,7 +135,7 @@ header {
   margin: 20px auto 0;
   padding: 10px;
   background-color: dimgrey;
-  height: 270px;
+  height: auto;
   width: 300px;
   border-radius: 20px;
 }
@@ -154,8 +154,22 @@ header {
           align-items: center;
 }
 
-.evenementenGrid .eventTitle {
+.evenementenGrid .event .eventTitle {
   color: #EB5B0A;
+}
+
+.evenementenGrid .event .eventData {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  margin-left: 0px;
+  max-width: 300px;
+}
+
+.evenementenGrid .event .eventData p {
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 768px) {

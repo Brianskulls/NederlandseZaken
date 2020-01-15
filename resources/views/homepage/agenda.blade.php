@@ -37,10 +37,13 @@
                 <div class="event">
                     <div class="eventImg">
                         <h2>200 x 300</h2>
+                        <img src="{{$evenement->imagepad}}" alt="">
                     </div>
                     <h2 class="eventTitle">{{ $evenement->naam }}</h2>
-                    <p class="eventDate">{{ $evenement->datum }}</p><p>{{ $evenement->begintijd }}</p>
-                    <p class="eventLocation">{{ $evenement->locatie }}</p>
+                    <div class="eventData">
+                        <p class="eventDate">{{ $evenement->datum }}</p><p>{{ $evenement->begintijd }}</p>
+                        <p class="eventLocation">{{ $evenement->locatie }}</p>
+                    </div>
                 </div>
 
             @endforeach
