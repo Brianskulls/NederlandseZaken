@@ -15,26 +15,11 @@
     @if(count($evenementen) > 0)
 
 
-
-        {{--            @foreach($evenementen as $i=>$evenement)--}}
-
-        {{--                <tr>--}}
-        {{--                    <td>{{ $i + 1 }}</td>--}}
-        {{--                    <td>{{ $evenement->naam }}</td>--}}
-        {{--                    <td>{{ $evenement->datum }}</td>--}}
-        {{--                    <td>{{ $evenement->created_at }}</td>--}}
-        {{--                    <td>{{ $evenement->updated_at }}</td>--}}
-        {{--                    <td><a data-js="open-edit"><span id="{{ $evenement->id }}">Edit</span></a></td>--}}
-        {{--                    <td><a data-js="open-remove"><span id="{{ $evenement->id }}">Remove</span></a></td>--}}
-        {{--                </tr>--}}
-
-        {{--            @endforeach--}}
-
         <div class="evenementenGrid">
 
             @foreach($evenementen as $i=>$evenement)
 
-                <div class="event">
+                <div class="event" onclick="window.location = 'agenda/{{$evenement->id}}' ">
                     <img class="eventImg" src="{{Storage::url($evenement->imagepad)}}" alt="">
                     <h2 class="eventTitle">{{ $evenement->naam }}</h2>
                     <div class="eventData">
@@ -46,7 +31,11 @@
 
             @endforeach
 
+
+
         </div>
+
+        {{ $evenementen->links() }}
 
     @endif
 

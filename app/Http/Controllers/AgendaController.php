@@ -17,12 +17,14 @@ class AgendaController extends Controller
 //  }
 
     public function showEvenementen() {
-        $evenementen = Evenementen::orderBy('created_at', 'desc')->get();
-        return view('homepage.agenda')->with('evenementen', $evenementen);
+//        $evenementen = Evenementen::orderBy('created_at', 'desc')->get();
+//        return view('homepage.agenda')->with('evenementen', $evenementen);
+        return view('homepage.agenda')->with(['evenementen' => Evenementen::paginate(6)]);
     }
 
     public function showEvent($id)
     {
-        //event detail
+        $evenementen = Evenementen::orderBy('created_at', 'desc')->where('id',$id)->get();
+        return view('homepage.detail', ['id' => $id])->with('evenementen', $evenementen[0]);
     }
 }

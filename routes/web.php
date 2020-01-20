@@ -29,7 +29,7 @@ Route::post('/admin/toevoegen', 'AdminController@storeEvenementen')->name('admin
 // Route to Agenda page
 Route::get('/agenda', 'AgendaController@showEvenementen')->name('agenda');
 // Route to Agenda page with selected event name
-Route::get('/agenda/{event_name}', 'AgendaController@showEvent')->name('agenda-details');
+Route::get('/agenda/{id}', 'AgendaController@showEvent')->name('agenda-details');
 
 // Route to Contact page
 Route::get('/contact', 'ContactController@index')->name('contact');
