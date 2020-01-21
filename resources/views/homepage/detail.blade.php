@@ -13,8 +13,7 @@
     <div class="detail">
 
         <div class="header">
-            <h1>{{$id}}</h1>
-            <h1>{{$evenementen->beschrijving}}</h1>
+
         </div>
 
         <div class="wrapper">
@@ -35,7 +34,16 @@
                     </div>
                 </div>
 
+                <div class="tickets">
+                    <p>Aantal tickets verkrijgbaar</p><div class="bar"></div>
+                    <div class="count">{{$id}}/ 150</div>
+                </div>
             </div>
+
+            <div class="programma"></div>
+            <div class="congres"></div>
+
+
         </div>
     </div>
 
