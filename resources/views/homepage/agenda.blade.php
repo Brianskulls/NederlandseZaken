@@ -25,10 +25,16 @@
 
                 <div class="event" onclick="window.location = 'agenda/{{$evenement->id}}' ">
                     <img class="eventImg" src="{{Storage::url($evenement->imagepad)}}" alt="">
-                    <h2 class="eventTitle">{{ $evenement->naam }}</h2>
-                    <div class="eventData">
-                        <p class="eventDate">{{ $evenement->datum }}</p>
+                    <div class="eventBody">
+                        <h2 class="eventTitle">{{ $evenement->naam }}</h2>
+                        <span class="line"></span>
                         <p>{{ $evenement->begintijd }}</p>
+                    </div>
+
+                    <hr>
+
+                    <div class="eventFooter">
+                        <p class="eventDate">{{ $evenement->datum }}</p>
                         <p class="eventLocation">{{ $evenement->locatie }}</p>
                     </div>
                 </div>

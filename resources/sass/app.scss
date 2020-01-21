@@ -115,9 +115,9 @@ header {
     width: 100%;
     padding-left: 100px;
 
-    h1{
+    h1 {
         margin-top: 50px;
-        color: rgb(188,188,188);
+        color: rgb(188, 188, 188);
         font-size: 3em;
     }
 }
@@ -132,27 +132,32 @@ header {
     margin: 50px auto 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 50px;
+    grid-gap: 70px;
     width: 100vw;
     padding-top: 70px;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
 
     .event {
+        cursor: pointer;
         margin: 0 auto;
         overflow: hidden;
-        padding: 10px;
-        background-color: dimgrey;
+        background-color: rgb(39, 39, 39);
         height: auto;
-        width: 300px;
+        width: 370px;
         border-radius: 20px;
+        box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.6);;
+        color: rgb(193, 193, 193);
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 15px;
 
         &Img {
             background-color: white;
-            height: 200px;
-            width: 300px;
-            margin-left: -10px;
-            margin-top: -10px;
+            height: 150px;
+            width: 400px;
+            margin-left: -40px;
+            margin-top: -40px;
             object-fit: cover;
             object-position: center;
 
@@ -162,18 +167,45 @@ header {
 
         }
 
-        .eventTitle {
-            color: #EB5B0A;
-        }
 
-        .eventData {
+        .eventBody {
+            margin-top: 10px;
+            height: 150px;
+            .eventTitle {
+                color: rgb(193, 193, 193);
+                font-size: 2.5em;
+            }
+
+            .line{
+                width: 100px;
+                height: 3px;
+                border-radius: 100px;
+                background-color: cornflowerblue;
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+
             display: flex;
-            flex-direction: row;
-            margin-left: 0px;
+            flex-direction: column;
             max-width: 300px;
 
             p {
                 margin-right: 10px;
+            }
+        }
+
+        hr {
+            border: solid 0.5px rgb(85, 85, 85);
+            border-radius: 100px;
+        }
+
+        .eventFooter {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+
+            p {
+                margin-right: 50px;
             }
         }
     }

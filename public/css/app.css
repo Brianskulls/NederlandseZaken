@@ -141,29 +141,34 @@ header {
   margin: 50px auto 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 50px;
+  grid-gap: 70px;
   width: 100vw;
   padding-top: 70px;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .evenementenGrid .event {
+  cursor: pointer;
   margin: 0 auto;
   overflow: hidden;
-  padding: 10px;
-  background-color: dimgrey;
+  background-color: #272727;
   height: auto;
-  width: 300px;
+  width: 370px;
   border-radius: 20px;
+  box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.6);
+  color: #c1c1c1;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 15px;
 }
 
 .evenementenGrid .eventImg {
   background-color: white;
-  height: 200px;
-  width: 300px;
-  margin-left: -10px;
-  margin-top: -10px;
+  height: 150px;
+  width: 400px;
+  margin-left: -40px;
+  margin-top: -40px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -176,22 +181,51 @@ header {
           align-items: center;
 }
 
-.evenementenGrid .event .eventTitle {
-  color: #EB5B0A;
+.evenementenGrid .event .eventBody {
+  margin-top: 10px;
+  height: 150px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  max-width: 300px;
 }
 
-.evenementenGrid .event .eventData {
+.evenementenGrid .event .eventBody .eventTitle {
+  color: #c1c1c1;
+  font-size: 2.5em;
+}
+
+.evenementenGrid .event .eventBody .line {
+  width: 100px;
+  height: 3px;
+  border-radius: 100px;
+  background-color: cornflowerblue;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.evenementenGrid .event .eventBody p {
+  margin-right: 10px;
+}
+
+.evenementenGrid .event hr {
+  border: solid 0.5px #555555;
+  border-radius: 100px;
+}
+
+.evenementenGrid .event .eventFooter {
+  margin-top: 10px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
           flex-direction: row;
-  margin-left: 0px;
-  max-width: 300px;
 }
 
-.evenementenGrid .event .eventData p {
-  margin-right: 10px;
+.evenementenGrid .event .eventFooter p {
+  margin-right: 50px;
 }
 
 .pagination {
