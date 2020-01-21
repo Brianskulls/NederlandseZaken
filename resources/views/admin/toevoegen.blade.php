@@ -34,6 +34,12 @@
     {!! Form::label('evenementImage', 'Plaatje evenement') !!}
     {!! Form::file('evenementImage') !!}<br>
 
+    {!! Form::label('evenementBodyColor', 'Kleur body van evenement') !!}
+    {!! Form::color('evenementBodyColor') !!}<br>
+
+    {!! Form::label('evenementHeaderColor', 'Kleur header van evenement') !!}
+    {!! Form::color('evenementHeaderColor') !!}<br>
+
     {!! Form::submit('Toevoegen', ['class' => '']) !!}
     {!! Form::close() !!}
 @endsection

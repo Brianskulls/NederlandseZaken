@@ -27,10 +27,9 @@ header {
 
 /* Navigation bar */
 .navbar {
-    width: 100%;
+    width: calc(50% + 3.5em);
     max-width: 120em;
-    margin: 0 auto;
-    padding: 0 1.5em;
+    margin-left: calc(50vw - 3.5em);
     // Nederlandse Zaken logo style
     img {
         width: 7em;
@@ -71,6 +70,7 @@ header {
         cursor: pointer;
         line-height: 5em;
         z-index: 1500;
+        margin-right: 20px;
     }
 
     // Style for the lines for the hamburger menu
@@ -173,29 +173,50 @@ header {
 }
 
 
-@media screen and (max-width: 768px) {
-    .navbar__list {
-        width: 100%;
-        height: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(235, 91, 12);
-        position: fixed;
-        left: 0;
-        bottom: -100vh;
-        transition: bottom 650ms;
-    }
-    .navbar__list.active {
-        bottom: 0;
-    }
-    .navbar__link {
-        padding-bottom: 3em;
-    }
-}
+//@media screen and (max-width: 768px) {
+//    .navbar__list {
+//        width: 100%;
+//        height: 100%;
+//        flex-direction: column;
+//        align-items: center;
+//        justify-content: center;
+//        background-color: rgb(235, 91, 12);
+//        position: fixed;
+//        left: 0;
+//        bottom: -100vh;
+//        transition: bottom 650ms;
+//    }
+//    .navbar__list.active {
+//        bottom: 0;
+//    }
+//    .navbar__link {
+//        padding-bottom: 3em;
+//    }
+//}
 
-@media screen and (min-width: 769px) {
-    .navbar__hamburger {
-        display: none;
-    }
+.navbar__list {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(235, 91, 12);
+    position: fixed;
+    bottom: 0;
+    right: -100vh;
+    transition: right 650ms;
 }
+.navbar__list.active {
+    right: 0;
+}
+.navbar__link {
+    padding-bottom: 3em;
+}
+//
+//@media screen and (min-width: 769px) {
+//    .navbar__hamburger {
+//        display: none;
+//    }
+//}
+

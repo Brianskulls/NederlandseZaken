@@ -39,6 +39,8 @@ class AdminController extends Controller
         $evenementen->eindtijd = $request->evenementEindtijd;
         $evenementen->imagepad = $imagePath;
         $evenementen->imagenaam = $request->evenementImage->getClientOriginalName();
+        $evenementen->bodyColor = $request->evenementBodyColor;
+        $evenementen->headerColor = $request->evenementHeaderColor;
 
 
         $evenementen->save();

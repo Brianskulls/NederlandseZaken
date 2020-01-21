@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{{ mix('/css/app.css')}}">
         <script src="{{ mix('/js/app.js')}}"></script>
     </head>
-    <body>
+    <body @if(isset($bodyColor)) style="background-color: {{$bodyColor}};" @endif>
       <!-- Navigation bar in the header -->
       @include ('layouts.partials.header')
       <!-- Main -->

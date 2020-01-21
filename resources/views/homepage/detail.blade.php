@@ -1,5 +1,5 @@
 <!-- Extend from the homepage layout -->
-@extends('layouts.homepage')
+@extends('layouts.homepage', ['bodyColor' => $evenementen->bodyColor, 'headerColor' => $evenementen->headerColor])
 
 <!-- Title of this web page -->
 @section('title')
@@ -8,6 +8,7 @@
 
 <!-- Everything that comes in the <main> -->
 @section('content')
+
     <h1>{{$id}}</h1>
     <h1>{{$evenementen->beschrijving}}</h1>
 

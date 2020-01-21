@@ -1,5 +1,5 @@
 <!-- Navigation bar in the header -->
-<header>
+<header @if(isset($headerColor)) style="background-color: {{$headerColor}};" @endif>
   <div class="navbar">
     <nav>
       <a href="{{ route('home') }}">
