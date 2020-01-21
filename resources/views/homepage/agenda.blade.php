@@ -14,7 +14,11 @@
      Contains buttons to remove and edit -->
     @if(count($evenementen) > 0)
 
+        <div class="title">
+            <h1>Evenementen</h1>
+        </div>
 
+    <div class="wrapper">
         <div class="evenementenGrid">
 
             @foreach($evenementen as $i=>$evenement)
@@ -34,8 +38,10 @@
 
 
         </div>
-
         {{ $evenementen->links() }}
+    </div>
+
+
 
     @endif
 
