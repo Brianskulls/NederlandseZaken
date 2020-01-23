@@ -27,8 +27,8 @@
                     <img class="eventImg" src="{{Storage::url($evenement->imagepad)}}" alt="">
                     <div class="eventBody">
                         <h2 class="eventTitle">{{ $evenement->naam }}</h2>
-                        <span class="line"></span>
-                        <p>{{ $evenement->begintijd }}</p>
+                        <span @if (isset($evenement->accentColor)) style="background-color: {{$evenement->accentColor}}" @endif class="line"></span>
+                        <p>{{ $evenement->beschrijving }}</p>
                     </div>
 
                     <hr>

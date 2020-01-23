@@ -19,7 +19,7 @@
 
         <div class="wrapper">
             <div class="title">
-                <h1>{{$evenementen->naam}}</h1>
+                <h1 @if (isset($evenementen->accentColor)) style="color: {{$evenementen->accentColor}}" @endif>{{$evenementen->naam}}</h1>
 
                 <div class="date">
                     <h2>{{$evenementen->datum}}</h2>
@@ -28,16 +28,17 @@
 
             <div class="description">
                 <div class="text">
-                    <h1>{{$evenementen->beschrijving}}</h1>
-                    <div class="bar"></div>
+                    <h1 @if (isset($evenementen->accentColor)) style="color: {{$evenementen->accentColor}}" @endif>{{$evenementen->beschrijving}}</h1>
+                    <div @if (isset($evenementen->accentColor)) style="background-color: {{$evenementen->accentColor}}" @endif class="bar"></div>
                     <div class="hint">
                         Stel hier onder uw ticket samen
                     </div>
                 </div>
 
                 <div class="tickets">
-                    <p>Aantal tickets verkrijgbaar</p><div class="bar"></div>
-                    <div class="count">{{$id}}/ @if($evenementen->totalTicket !== 0 ) {{$evenementen->totalTicket}} @else {{'Not Set'}} @endif</div>
+                    <p>Aantal tickets verkrijgbaar</p>
+                    <div class="bar" @if (isset($evenementen->accentColor)) style="background-color: {{$evenementen->accentColor}}" @endif></div>
+                    <div class="count" @if (isset($evenementen->accentColor)) style="color: {{$evenementen->accentColor}}" @endif>{{$id}}/ @if($evenementen->totalTicket !== 0 ) {{$evenementen->totalTicket}} @else {{'Not Set'}} @endif</div>
                 </div>
             </div>
 
@@ -51,23 +52,31 @@
                 <div class="info">
                     <h1>Info</h1>
                     <div class="listItem">
-                        <h2>Datum</h2>
+                        <h2 @if (isset($evenementen->accentColor)) style="color: {{$evenementen->accentColor}}" @endif>Datum</h2>
                         <p>{{$evenementen->datum}}</p>
                     </div>
 
                     <div class="listItem">
-                        <h2>Locatie</h2>
+                        <h2 @if (isset($evenementen->accentColor)) style="color: {{$evenementen->accentColor}}" @endif>Locatie</h2>
                         <p>{{$evenementen->locatie}}</p>
                     </div>
 
                     <div class="listItem">
-                        <h2>Prijs</h2>
+                        <h2 @if (isset($evenementen->accentColor)) style="color: {{$evenementen->accentColor}}" @endif>Prijs</h2>
                         <p>@if( $evenementen->eventPrice !== 0.00 ) {{"€" . $evenementen->eventPrice}} @else {{'Gratis'}} @endif</p>
                     </div>
                 </div>
             </div>
             <div class="congres">
                 <h1>Congress</h1>
+            </div>
+
+            <div class="inschrijven">
+
+            </div>
+
+            <div class="geselecteerde">
+                <h1>Geselecteerde<br>Sprekers</h1>
             </div>
 
 

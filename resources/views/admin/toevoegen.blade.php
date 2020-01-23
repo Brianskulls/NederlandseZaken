@@ -46,6 +46,9 @@
     {!! Form::label('evenementHeaderColor', 'Kleur header van evenement') !!}
     {!! Form::color('evenementHeaderColor') !!}<br>
 
+    {!! Form::label('evenementAccentColor', 'Accent kleur') !!}
+    {!! Form::color('evenementAccentColor') !!}<br>
+
     {!! Form::submit('Toevoegen', ['class' => '']) !!}
     {!! Form::close() !!}
 @endsection

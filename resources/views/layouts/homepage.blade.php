@@ -15,7 +15,7 @@
       <main>
         @yield('content')
       </main>
-      <!-- Footer -->\
+      <!-- Footer -->
 
       <footer>
       </footer>

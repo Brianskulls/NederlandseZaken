@@ -43,6 +43,7 @@ class AdminController extends Controller
         $evenementen->imagenaam = $request->evenementImage->getClientOriginalName();
         $evenementen->bodyColor = $request->evenementBodyColor;
         $evenementen->headerColor = $request->evenementHeaderColor;
+        $evenementen->accentColor = $request->evenementAccentColor;
 
 
         $evenementen->save();
