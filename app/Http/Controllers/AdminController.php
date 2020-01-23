@@ -37,6 +37,8 @@ class AdminController extends Controller
         $evenementen->datum = $request->evenementDatum;
         $evenementen->begintijd = $request->evenementBegintijd;
         $evenementen->eindtijd = $request->evenementEindtijd;
+        $evenementen->totalTicket = $request->evenementTicketAantal;
+        $evenementen->eventPrice = $request->evenementPrijs;
         $evenementen->imagepad = $imagePath;
         $evenementen->imagenaam = $request->evenementImage->getClientOriginalName();
         $evenementen->bodyColor = $request->evenementBodyColor;

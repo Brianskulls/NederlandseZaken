@@ -31,6 +31,12 @@
     {!! Form::label('evenementEindtijd', 'Eindtijd evenement') !!}
     {!! Form::time('evenementEindtijd', '', ['class' => '']) !!}<br>
 
+    {!! Form::label('evenementTicketAantal', 'Ticket Aantal') !!}
+    {!! Form::text('evenementTicketAantal', '', ['class' => '']) !!}<br>
+
+    {!! Form::label('evenementPrijs', 'Ticket Prijs') !!}
+    {!! Form::text('evenementPrijs', '', ['class' => '']) !!}<br>
+
     {!! Form::label('evenementImage', 'Plaatje evenement') !!}
     {!! Form::file('evenementImage') !!}<br>
 
