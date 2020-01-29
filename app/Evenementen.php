@@ -8,5 +8,11 @@ use Laravel\Scout\Searchable;
 
 class Evenementen extends Model
 {
+
     protected $table = "evenementen";
+
+    public function agendaItems()
+    {
+        return $this->hasMany(AgendaItem::class);
+    }
 }
