@@ -19,7 +19,7 @@ html {
     min-height: 100vh;
   }
   &__left {
-    background-color: rgb(255, 72, 0);
+    background-color: #202020;
     color: rgb(255, 255, 255);
     padding: 1em 3em;
     text-align: center;
@@ -37,5 +37,6 @@ html {
   }
   &__main {
     text-align: center;
+    background-color: #404040;
   }
 }

@@ -22,7 +22,7 @@ html {
 }
 
 .dashboard__left {
-  background-color: #ff4800;
+  background-color: #202020;
   color: white;
   padding: 1em 3em;
   text-align: center;
@@ -44,5 +44,6 @@ html {
 
 .dashboard__main {
   text-align: center;
+  background-color: #404040;
 }
 

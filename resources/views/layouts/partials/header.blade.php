@@ -3,7 +3,7 @@
   <div class="navbar">
     <nav>
       <a href="{{ route('home') }}">
-        <img src="img/logo.png" alt="Nederlandse Zaken Logo">
+        <img src="img/logo_nlz.svg" alt="Nederlandse Zaken Logo">
       </a>
       <!-- List with navigation items -->
       <ul class="navbar__list">
