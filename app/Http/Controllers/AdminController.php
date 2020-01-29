@@ -5,9 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Evenementen;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         return view('admin.admin');
@@ -53,5 +59,10 @@ class AdminController extends Controller
         session()->flash('Gelukt', 'Evenement ' . $evenementen->naam . ' succesvol toegevoegd');
 
         return redirect()->back();
+    }
+
+    public function logout() {
+        Auth::logout();
+        return redirect()->route('home');
     }
 }

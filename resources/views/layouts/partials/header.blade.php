@@ -23,10 +23,6 @@
         <li class="navbar__item">
           <a href="{{ route('info') }}" class="navbar__link @if(Request::routeIs('info'))navbar__active @endif">Info</a>
         </li>
-        <!-- Item 5 -->
-        <li class="navbar__item">
-          <a href="#" class="navbar__link">Login</a>
-        </li>
       </ul>
       <!-- Hamburger Menu -->
       <div class="navbar__hamburger">
