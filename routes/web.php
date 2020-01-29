@@ -23,8 +23,8 @@ Route::get('/admin', 'AdminController@index')->name('admin');
 // Route to admin page events
 Route::get('/admin/evenementen', 'AdminController@showEvenementen')->name('admin-evenementen');
 // Route to admin page add events
-Route::get('/admin/toevoegen', 'AdminController@addEvenementen')->name('admin-toevoegen');
-Route::post('/admin/toevoegen', 'AdminController@storeEvenementen')->name('admin-store');
+Route::get('/admin/evenementen/toevoegen', 'AdminController@addEvenementen')->name('admin-toevoegen');
+Route::post('/admin/evenementen/toevoegen', 'AdminController@storeEvenementen')->name('admin-store');
 
 // Route to Agenda page
 Route::get('/agenda', 'AgendaController@showEvenementen')->name('agenda');
