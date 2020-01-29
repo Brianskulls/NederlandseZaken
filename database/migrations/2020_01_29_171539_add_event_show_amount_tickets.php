@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddAgendaId extends Migration
+class AddEventShowAmountTickets extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class AddAgendaId extends Migration
     public function up()
     {
         Schema::table('evenementen', function (Blueprint $table) {
-            $table->integer('agendaId');
+            $table->boolean('laatAantalTicketsZien');
+            $table->integer('aantalGekochteTickets')->default(0);
         });
     }
 
@@ -26,7 +27,8 @@ class AddAgendaId extends Migration
     public function down()
     {
         Schema::table('evenementen', function (Blueprint $table) {
-            $table->dropColumn('agendaId');
+            $table->dropColumn('laatAantalTicketsZien');
+            $table->dropColumn('aantalGekochteTickets');
         });
     }
 }

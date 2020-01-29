@@ -35,11 +35,13 @@
                     </div>
                 </div>
 
+                @if($evenementen->laatAantalTicketsZien == true)
                 <div class="tickets">
                     <p>Aantal tickets verkrijgbaar</p>
                     <div class="bar" @if (isset($evenementen->accentColor)) style="background-color: {{$evenementen->accentColor}}" @endif></div>
-                    <div class="count" @if (isset($evenementen->accentColor)) style="color: {{$evenementen->accentColor}}" @endif>{{$id}}/ @if($evenementen->totalTicket !== 0 ) {{$evenementen->totalTicket}} @else {{'Not Set'}} @endif</div>
+                    <div class="count" @if (isset($evenementen->accentColor)) style="color: {{$evenementen->accentColor}}" @endif>{{$evenementen->totalTicket-$evenementen->aantalGekochteTickets}}/ {{$evenementen->totalTicket}}</div>
                 </div>
+                    @endif
             </div>
 
             <div class="programma">

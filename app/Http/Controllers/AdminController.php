@@ -50,6 +50,7 @@ class AdminController extends Controller
         $evenementen->bodyColor = $request->evenementBodyColor;
         $evenementen->headerColor = $request->evenementHeaderColor;
         $evenementen->accentColor = $request->evenementAccentColor;
+        $evenementen->laatAantalTicketsZien = $request->evenementTicketsLatenZien;
 
 
         $evenementen->save();

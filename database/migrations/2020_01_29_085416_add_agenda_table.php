@@ -28,11 +28,6 @@ class AddagendaTable extends Migration
      */
     public function down()
     {
-        Schema::table('agendaItems', function (Blueprint $table) {
-            $table->dropColumn('title');
-            $table->dropColumn('description');
-            $table->dropColumn('begintijd');
-            $table->dropColumn('eindtijd');
-        });
+        Schema::drop('agendaItems');
     }
 }

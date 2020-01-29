@@ -34,6 +34,9 @@
     {!! Form::label('evenementTicketAantal', 'Ticket Aantal') !!}
     {!! Form::text('evenementTicketAantal', '', ['class' => '']) !!}<br>
 
+    {!! Form::label('evenementPrijs', 'Hoeveelheid tickets laten zien') !!}
+    {!! Form::select('evenementTicketsLatenZien', array(false => 'Nee', true => 'Ja')) !!}<br>
+
     {!! Form::label('evenementPrijs', 'Ticket Prijs') !!}
     {!! Form::text('evenementPrijs', '', ['class' => '']) !!}<br>
 
