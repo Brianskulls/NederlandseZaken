@@ -23,7 +23,7 @@
 
             @foreach($evenementen as $i=>$evenement)
 
-                <div class="event" onclick="window.location = 'agenda/{{$evenement->id}}' ">
+                <div class="event" onclick="window.location = 'evenementen/{{$evenement->id}}' ">
                     <img class="eventImg" src="{{Storage::url($evenement->imagepad)}}" alt="">
                     <div class="eventBody">
                         <h2 class="eventTitle">{{ $evenement->naam }}</h2>
