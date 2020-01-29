@@ -3,7 +3,7 @@
   <div class="navbar">
     <nav>
       <a href="{{ route('home') }}">
-        <img src="img/logo.png" alt="Nederlandse Zaken Logo">
+        <img src="img/logo_nlz.svg" alt="Nederlandse Zaken Logo">
       </a>
       <!-- List with navigation items -->
       <ul class="navbar__list">
@@ -22,10 +22,6 @@
         <!-- Item 4 -->
         <li class="navbar__item">
           <a href="{{ route('info') }}" class="navbar__link @if(Request::routeIs('info'))navbar__active @endif">Info</a>
-        </li>
-        <!-- Item 5 -->
-        <li class="navbar__item">
-          <a href="#" class="navbar__link">Login</a>
         </li>
       </ul>
       <!-- Hamburger Menu -->
