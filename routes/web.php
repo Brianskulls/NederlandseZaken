@@ -20,6 +20,7 @@ Route::view('/info', 'homepage.info')->name('info');
 
 // Route to Admin page
 Route::get('/admin', 'AdminController@index')->name('admin');
+Route::get('/admin/logout', 'AdminController@logout')->name('admin-logout');
 // Route to admin page events
 Route::get('/admin/evenementen', 'AdminController@showEvenementen')->name('admin-evenementen');
 // Route to admin page add events
@@ -33,3 +34,5 @@ Route::get('/agenda/{id}', 'AgendaController@showEvent')->name('agenda-details')
 
 // Route to Contact page
 Route::get('/contact', 'ContactController@index')->name('contact');
+
+Auth::Routes();

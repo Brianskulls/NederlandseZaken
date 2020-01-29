@@ -5,6 +5,6 @@
         <li><a href="{{ route('admin') }}">Dashboard</a></li>
         <li><a href="{{ route('admin-evenementen') }}">Evenementen</a></li>
         <li><a href="{{ route('admin-toevoegen') }}">Toevoegen</a></li>
-        <li><a href="">Uitloggen</a></li>
+        <li><a href="{{ route('admin-logout') }}">Uitloggen</a></li>
       </ul>
     </div>
