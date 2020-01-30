@@ -165,6 +165,7 @@ header {
 
 .evenementenGrid .eventImg {
   background-color: white;
+<<<<<<< HEAD
   height: 150px;
   width: 400px;
   margin-left: -40px;
@@ -173,6 +174,12 @@ header {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+=======
+  height: 200px;
+  width: 300px;
+  margin-left: -10px;
+  margin-top: -10px;
+>>>>>>> parent of f2567f8... Kut pim
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
